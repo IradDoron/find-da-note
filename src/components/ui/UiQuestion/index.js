@@ -13,8 +13,8 @@ import ThemeContext from '../../../contexts/ThemeContext';
 
 // import helpers
 import convertLatinNameToHebrew from '../../../helpers/convertLatinNameToHebrew';
-import intervalNumberToWord from '../../../helpers/intervalNumberToWord';
 import getColorByStatusAndType from '../../../helpers/getColorByStatusAndType';
+import intervalNumberToWord from '../../../helpers/intervalNumberToWord';
 
 const FlexRow = styled.div`
 	display: flex;
@@ -24,7 +24,7 @@ const FlexRow = styled.div`
 
 function UiQuestion() {
 	const { theme, themeMode } = useContext(ThemeContext);
-	const { state, dispatch } = useContext(StateContext);
+	const { state } = useContext(StateContext);
 
 	return (
 		<>

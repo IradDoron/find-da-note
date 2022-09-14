@@ -1,6 +1,5 @@
 // imports from libraries
 import { useContext } from 'react';
-import styled from 'styled-components';
 
 // import blocks
 import LabelBox from '../../blocks/LabelBox';
@@ -12,12 +11,9 @@ import ThemeContext from '../../../contexts/ThemeContext';
 // import constants
 import ACTIONS from '../../../constants/ACTIONS';
 
-// import helpers
-import getResult from '../../../helpers/getResult';
-
 function UiSubmitButton() {
-	const { theme, themeMode } = useContext(ThemeContext);
-	const { state, dispatch } = useContext(StateContext);
+	const { theme } = useContext(ThemeContext);
+	const { dispatch } = useContext(StateContext);
 
 	return (
 		<>

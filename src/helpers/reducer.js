@@ -6,7 +6,6 @@ import checkIfCorrect from './checkIfCorrect';
 import getRandDir from './getRandDir';
 import getRandInterval from './getRandInterval';
 import getRandStartNote from './getRandStartNote';
-import getResult from './getResult';
 
 function reducer(state, data) {
 	const newState = { ...state };
