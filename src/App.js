@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useReducer, useState } from 'react';
+
+import styled from 'styled-components';
+
+import initialState from './constants/initialState';
+import theme from './constants/theme';
+
+import StateContext from './contexts/StateContext';
+import ThemeContext from './contexts/ThemeContext';
+
+import reducer from './helpers/reducer';
+
+import UiAppWrapper from './components/ui/UiAppWrapper';
+import UiKeyboard from './components/ui/UiKeyboard';
+import UiNextButton from './components/ui/UiNextButton';
+import UiNotesButtons from './components/ui/UiNotesButtons';
+import UiQuestion from './components/ui/UiQuestion';
+import UiSubmitButton from './components/ui/UiSubmitButton';
+
+const ButtonsContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [themeMode, setThemeMode] = useState('dark');
+	const [state, dispatch] = useReducer(reducer, initialState);
+
+	return (
+		<ThemeContext.Provider value={{ theme, themeMode, setThemeMode }}>
+			<StateContext.Provider value={{ state, dispatch }}>
+				<UiAppWrapper>
+					<UiKeyboard />
+					<UiQuestion />
+					<UiNotesButtons />
+					<ButtonsContainer>
+						<UiSubmitButton />
+						<UiNextButton />
+					</ButtonsContainer>
+				</UiAppWrapper>
+			</StateContext.Provider>
+		</ThemeContext.Provider>
+	);
 }
 
 export default App;
