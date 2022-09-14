@@ -17,6 +17,8 @@ function reducer(state, data) {
 				return (noteData.status = 'default');
 			});
 			newState.noteButtonsData[payload.buttonIndex].status = 'active';
+			newState.userChoiceButtonStatus = 'default';
+
 			return newState;
 		}
 		case ACTIONS.SUBMIT_RESULT: {
