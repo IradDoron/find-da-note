@@ -19,6 +19,10 @@ import getColorByStatusAndType from '../../../helpers/getColorByStatusAndType';
 const FlexRow = styled.div`
 	display: flex;
 	flex-direction: row;
+	& > * {
+		cursor: pointer;
+		user-select: none;
+	}
 
 	
 

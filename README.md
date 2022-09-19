@@ -56,8 +56,13 @@ The general structure of the "component" folder is:
 - When choose correct note, draw on it the sign V
 - Add more intervals
 - Make the keyboard playable
-- Make it responsive
 - Add small animations on click for every button
+- Show how many users are connected to the game
+- Add a "leaderboard" for the best players
+- Add a "settings" page
+- Add a "help" page
+- Add a "about" page
+- Add a "contact" page
 
 ---
 

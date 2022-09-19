@@ -5,6 +5,11 @@ const ButtonsContainer = styled.div`
 	flex-direction: row;
 	justify-content: center;
 
+	& > * {
+		cursor: pointer;
+		user-select: none;
+	}
+
 	${({ theme }) => theme.breakpoints.down('sm')} {
 		& > * {
 			margin: 0 ${({ theme }) => theme.spacing.getSpacing('lg')};
