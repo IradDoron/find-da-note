@@ -21,12 +21,12 @@ function UiSubmitButton() {
 	const [status, setStatus] = useState('default');
 
 	useEffect(() => {
-		if (state.userChoice === '') {
+		if (state.userChoice === '' || state.userChoiceButtonStatus === 'correct') {
 			setStatus('disabled');
 		} else {
 			setStatus('default');
 		}
-	}, [state.userChoice]);
+	}, [state.userChoice, state.userChoiceButtonStatus]);
 
 
 	return (
