@@ -28,7 +28,6 @@ function UiNextButton() {
 		}
 	}, [state.userChoiceButtonStatus]);
 
-	console.log(state)
 	return (
 		<>
 			<LabelBox 

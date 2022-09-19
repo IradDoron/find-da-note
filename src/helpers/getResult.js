@@ -1,5 +1,4 @@
 function getResult(startNote, interval, dir) {
-	console.log(startNote, interval, dir);
 	const notesUp = [
 		'C',
 		'D',
