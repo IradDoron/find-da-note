@@ -19,7 +19,21 @@ import intervalNumberToWord from '../../../helpers/intervalNumberToWord';
 const FlexRow = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
+	${({ theme }) => theme.breakpoints.down('sm')} {
+		& > * {
+			margin: 0 ${({ theme }) => theme.spacing.getSpacing('xs')};
+			font-size: ${({ theme }) => theme.typography.getFontSize('sm')};
+
+		}
+	}
+	${({ theme }) => theme.breakpoints.up('sm')} {
+		& > * {
+			margin: 0 ${({ theme }) => theme.spacing.getSpacing('sm')};
+			font-size: ${({ theme }) => theme.typography.getFontSize('sm')};
+
+		}
+	}
 `;
 
 function UiQuestion() {
@@ -53,7 +67,6 @@ function UiQuestion() {
 					<EqualSign.Rect />
 				</EqualSign>
 				<LabelBox
-					
 					theme={theme}
 					themeMode={themeMode}
 					minWidth="58"

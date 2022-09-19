@@ -16,7 +16,7 @@ function UiNextButton() {
 	const { dispatch } = useContext(StateContext);
 	return (
 		<>
-			<LabelBox
+			<LabelBox 
 				onClick={() => dispatch({ type: ACTIONS.NEXT_QUESTION })}
 				theme={theme}
 				background="#fff"

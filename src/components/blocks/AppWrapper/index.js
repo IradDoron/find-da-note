@@ -7,8 +7,16 @@ const AppWrapper = styled.div`
 	height: 100vh;
 	width: 100vw;
 	padding: ${(props) => props.theme.spacing.getSpacing('sm')};
-	& > * {
-		margin-top: ${({ theme }) => theme.spacing.getSpacing('lg')};
+	${({ theme }) => theme.breakpoints.down('sm')} {
+		& > * {
+			margin-top: ${({ theme }) => theme.spacing.getSpacing('lg')};
+		}
+	}
+
+	${({ theme }) => theme.breakpoints.up('sm')} {
+		& > * {
+			margin-top: ${({ theme }) => theme.spacing.getSpacing('xl2')};
+		}
 	}
 `;
 

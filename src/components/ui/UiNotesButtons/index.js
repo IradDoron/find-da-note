@@ -19,7 +19,26 @@ import getColorByStatusAndType from '../../../helpers/getColorByStatusAndType';
 const FlexRow = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+
+	
+
+	${({ theme }) => theme.breakpoints.down('sm')} {
+		justify-content: center;
+		& > * {
+			margin: 0 ${({ theme }) => theme.spacing.getSpacing('xs2')};
+			padding: ${({ theme }) => theme.spacing.getSpacing('xs')};
+			font-size: ${({ theme }) => theme.typography.getFontSize('xs')};
+		}
+	}
+
+	${({ theme }) => theme.breakpoints.up('sm')} {
+		justify-content: center;
+		& > * {
+			margin: 0 ${({ theme }) => theme.spacing.getSpacing('xs')};
+			padding: ${({ theme }) => theme.spacing.getSpacing('sm')};
+			font-size: ${({ theme }) => theme.typography.getFontSize('sm')};
+		}
+	}
 `;
 
 function UiNotesButtons() {
@@ -27,7 +46,7 @@ function UiNotesButtons() {
 	const { state, dispatch } = useContext(StateContext);
 
 	return (
-		<FlexRow>
+		<FlexRow theme={theme}>
 			{state.noteButtonsData.map((noteData, index) => {
 				return (
 					<LabelBox
@@ -35,7 +54,10 @@ function UiNotesButtons() {
 						onClick={() =>
 							dispatch({
 								type: ACTIONS.UPDATE_USER_CHOICE,
-								payload: { newChoice: noteData.noteName, buttonIndex: Number(index) },
+								payload: {
+									newChoice: noteData.noteName,
+									buttonIndex: Number(index),
+								},
 							})
 						}
 						theme={theme}

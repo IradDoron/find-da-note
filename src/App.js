@@ -10,6 +10,12 @@ import ThemeContext from './contexts/ThemeContext';
 
 import reducer from './helpers/reducer';
 
+// import blocks
+
+import ButtonsContainer from './components/blocks/ButtonsContainer';
+
+// import UI components
+
 import UiAppWrapper from './components/ui/UiAppWrapper';
 import UiKeyboard from './components/ui/UiKeyboard';
 import UiNextButton from './components/ui/UiNextButton';
@@ -17,11 +23,7 @@ import UiNotesButtons from './components/ui/UiNotesButtons';
 import UiQuestion from './components/ui/UiQuestion';
 import UiSubmitButton from './components/ui/UiSubmitButton';
 
-const ButtonsContainer = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-`;
+
 
 function App() {
 	const [themeMode, setThemeMode] = useState('dark');
@@ -34,7 +36,7 @@ function App() {
 					<UiKeyboard />
 					<UiQuestion />
 					<UiNotesButtons />
-					<ButtonsContainer>
+					<ButtonsContainer theme={theme}>
 						<UiSubmitButton />
 						<UiNextButton />
 					</ButtonsContainer>

@@ -42,7 +42,7 @@ const theme = {
 	breakpoints: {
 		values: {
 			xs: 0,
-			sm: 600,
+			sm: 657,
 			md: 960,
 			lg: 1280,
 			xl: 1920,
@@ -167,6 +167,7 @@ const theme = {
 	},
 	spacing: {
 		values: {
+			xs2: 6,
 			xs: 8,
 			sm: 16,
 			md: 24,
