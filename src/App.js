@@ -1,6 +1,5 @@
 import { useReducer, useState } from 'react';
 
-import styled from 'styled-components';
 
 import initialState from './constants/initialState';
 import theme from './constants/theme';
