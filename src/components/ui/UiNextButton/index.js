@@ -15,7 +15,7 @@ import ACTIONS from '../../../constants/ACTIONS';
 import getColorByStatusAndType from '../../../helpers/getColorByStatusAndType';
 
 function UiNextButton() {
-	const { theme , themeMode} = useContext(ThemeContext);
+	const { theme, themeMode } = useContext(ThemeContext);
 	const { state, dispatch } = useContext(StateContext);
 
 	const [status, setStatus] = useState('default');
@@ -30,8 +30,10 @@ function UiNextButton() {
 
 	return (
 		<>
-			<LabelBox 
-				onClick={() => dispatch({ type: ACTIONS.NEXT_QUESTION })}
+			<LabelBox
+				onClick={() =>
+					status === 'default' && dispatch({ type: ACTIONS.NEXT_QUESTION })
+				}
 				theme={theme}
 				background={getColorByStatusAndType(
 					status,
