@@ -36,6 +36,11 @@ const theme = {
 					incorrect: '#FF5656',
 					default: '#fff',
 				},
+				submitButton: {
+					default: '#fff',
+					hover: '#8287A8',
+					disabled: '#808185',
+				},
 			},
 		},
 	},
@@ -263,6 +268,12 @@ const theme = {
 			} animation: ${type} ${theme.animations.getDuration(
 				duration
 			)} ${theme.animations.getIterationCount(iterationCount)};`,
+	},
+	effects: {
+		notPressedBoxShadow: `-2px -2px 7px rgba(255,255,255,0.5),
+		2px 2px 7px rgba(40,40,40,1)`,
+		pressedBoxShadow: `inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
+		inset 10px 10px 15px rgba(70, 70, 70, 0.12)`,
 	},
 };
 export default theme;

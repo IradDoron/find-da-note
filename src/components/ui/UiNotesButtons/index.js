@@ -71,6 +71,7 @@ function UiNotesButtons() {
 							theme,
 							themeMode
 						)}
+						isPressed={noteData.status !== 'default'}
 						padding="xs"
 					>
 						<LabelBox.Label>
