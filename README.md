@@ -29,14 +29,6 @@ For the state management I used [Recoil](https://recoiljs.org/) and for the styl
 - [ ] Add a "about" page
 - [ ] Add a "contact" page
 - [ ] Add a score system
-
----
-
-## Bugs and improvements
-
-- [ ] Align better the names in the black keys
-- [ ] Make the size of all element fixed
-- [ ] Move accidentals to a column
 - [ ] Add option for display note in latin notation
 
 
