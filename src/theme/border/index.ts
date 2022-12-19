@@ -1,0 +1,32 @@
+import { Border } from 'theme/border/types';
+export const border: Border = {
+	values: {
+		'1': 2,
+		'2': 4,
+		'3': 6,
+		'4': 8,
+		'5': 12,
+		'6': 16,
+		'7': 20,
+		'8': 24,
+		'9': 32,
+		'10': 40,
+	},
+	radiusValues: {
+		'1': '2px',
+		'2': '4px',
+		'3': '6px',
+		'4': '8px',
+		'5': '12px',
+		'6': '16px',
+		'7': '20px',
+		'8': '24px',
+		'9': '32px',
+		'10': '40px',
+		pill: '9999px',
+		circle: '50%',
+	},
+	unit: 'px',
+	getBorder: (key) => `${border.values[key]}${border.unit}`,
+	getRadius: (key) => border.radiusValues[key],
+};
