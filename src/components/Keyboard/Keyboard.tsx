@@ -66,21 +66,21 @@ export const Keyboard = () => {
 							<StyledBlackKeyLabel>{baseNoteInHebrew}</StyledBlackKeyLabel>
 							<StyledBlackKeyLabel
 								custom={{
-									marginTop: '-26px',
+									marginTop: '-24px',
 								}}
 							>
 								{sharpSign}
 							</StyledBlackKeyLabel>
-							<StyledBlackKeyLabel
-								custom={{
-									marginBottom: '-28px',
-								}}
-							>
-								{flatSign}
-							</StyledBlackKeyLabel>
 
 							<StyledBlackKeyLabel>
 								{baseNoteSecondAboveInHebrew}
+							</StyledBlackKeyLabel>
+							<StyledBlackKeyLabel
+								custom={{
+									marginTop: '-24px',
+								}}
+							>
+								{flatSign}
 							</StyledBlackKeyLabel>
 						</StyledBlackKeyContainer>
 					);

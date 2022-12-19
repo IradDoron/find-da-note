@@ -38,6 +38,9 @@ export const Question = () => {
 				mobileProps={{
 					width: '40px',
 				}}
+				custom={{
+					width: '60px',
+				}}
 			>
 				<Text>{MusicHelpers.convertLatinNameToHebrew(currentStartNote)}</Text>
 			</Card>
@@ -46,6 +49,9 @@ export const Question = () => {
 				mobileProps={{
 					width: '80px',
 				}}
+				custom={{
+					width: '100px',
+				}}
 			>
 				<Text>{MusicHelpers.intervalNumberToWord(intervalNumber)}</Text>
 			</Card>
@@ -53,6 +59,9 @@ export const Question = () => {
 			<Card
 				mobileProps={{
 					width: '40px',
+				}}
+				custom={{
+					width: '60px',
 				}}
 			>
 				<Text>

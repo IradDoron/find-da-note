@@ -45,6 +45,14 @@ export const StyledWhiteKeyLabel = styled(Text)`
 	${({ theme }) => theme.breakpoints.down('sm')} {
 		font-size: 0.8rem;
 	}
+
+	${({ theme }) => theme.breakpoints.between('sm', 'md')} {
+		font-size: 1.4rem;
+	}
+
+	${({ theme }) => theme.breakpoints.up('md')} {
+		font-size: 1.5rem;
+	}
 `;
 
 StyledWhiteKeyLabel.defaultProps = {
@@ -54,6 +62,14 @@ StyledWhiteKeyLabel.defaultProps = {
 export const StyledBlackKeyLabel = styled(Text)`
 	${({ theme }) => theme.breakpoints.down('sm')} {
 		font-size: 0.8rem;
+	}
+
+	${({ theme }) => theme.breakpoints.between('sm', 'md')} {
+		font-size: 1.4rem;
+	}
+
+	${({ theme }) => theme.breakpoints.up('md')} {
+		font-size: 1.5rem;
 	}
 `;
 
